@@ -1,0 +1,201 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preconexión a Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fuentes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=Changa:wght@200..800&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <!-- Enlace al CSS -->
+    <link rel="stylesheet" href="carrito_compras.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Carro de Compras</title>
+</head>
+<body>
+
+    <header>
+        <div>
+            <a href="../index/index.html">
+                <img class="logo" src="images/LOGO CTR.png" alt="GTR Construcciones">
+            </a>       
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar">
+            <button>
+                <img class="buscar" src="images/buscarlogo.png" alt="Buscar">
+            </button>
+        </div>
+
+        
+
+        <div class="user-menu">
+            <div class="dropdown">
+                <img src="images/Menu icon.png" alt="Menú" class="dropbtn">
+                <div class="dropdown-content">
+                    <a href="#">Paga Ahora</a>
+                    <a href="#">Servicios</a>          
+                    <a href="#">Productos</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="user-menu">
+            <div class="dropdown">
+                <a href="carrito_compras.html">
+                    <img src="images/Carrito de compras.png" alt="Carrito">
+                </a>
+                <div class="dropdown-content"></div> 
+            </div>
+        </div> 
+
+        <div class="user-menu">
+            <div class="dropdown">
+                <img src="images/usuario.png" alt="Usuario">
+                <div class="dropdown-content">
+                    <a href="#">Cerrar Sesión</a>
+                    <a href="../login/login.html">Iniciar Sesión</a>          
+                    <a href="../login/login.html">Registrarse</a>
+                    <a href="../editar_perfil/editar_perfil.html">Editar Perfil</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </header>
+
+    <!-- Lista de Productos -->
+    <div class="productos-lista">
+        <!-- Producto 1 -->
+        <div class="producto-item">  
+            
+            
+            <div class="producto-check">
+            <input type="checkbox"  class="checkbox"  id="producto1" name="producto1">
+            <label for="producto1">Producto 1</label>
+        </div>
+        <div class="producto">
+            <a href="#" class="imagen-boton" onclick="confirmarBorrado(event)">
+                <img class="basura" src="images/basura.png" alt="">
+            </a>
+            
+            
+            
+            <img class="producto1" src="images/Herrammienta1.png" alt="">
+            <h3> Descripción del Producto 1
+                <br><br>Detalles adicionales del producto
+                <span class="precio" data-precio="40000">$40.000</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="incrementar" class="incrementar">+</button>
+                <span id="contador" class="numero">0</span>
+                <button id="decrementar" class="decrementar">-</button>
+            </h3>
+        </div>
+        
+        
+        
+          
+
+        <!-- Producto 2 -->
+        <div class="producto-item">
+            <div class="producto-check">
+                <input type="checkbox" class="checkbox" id="producto2" name="producto2" data-producto="Producto 2">
+                <label for="producto2">Producto 2</label>
+            </div>
+        </div>
+        
+        
+        
+            <div class="producto">
+                <a href="#" class="imagen-boton" onclick="confirmarBorrado(event)">
+                    <img class="basura" src="images/basura.png" alt="">
+                </a>
+                <img class="producto1" src="images/Herrammienta1.png" alt="Herramienta 2">
+                <h3> Descripción del Producto 2
+                    <br><br>Detalles adicionales del producto
+                    <span class="precio" data-precio="40000">$40.000</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button id="incrementar2" class="incrementar">+</button>
+                    <span id="contador2" class="numero">0</span>
+                    <button id="decrementar2" class="decrementar">-</button>
+                </h3>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="producto-item">
+            <div class="producto-check">
+                <input type="checkbox" class="checkbox" id="producto3" name="producto3">
+                <label for="producto3">Producto 3</label>
+            </div>
+            <div class="producto">
+                <a href="#" class="imagen-boton" onclick="confirmarBorrado(event)">
+                    <img class="basura" src="images/basura.png" alt="">
+                </a>
+                <img class="producto1" src="images/Herrammienta1.png" alt="Herramienta 3">
+                <h3> Descripción del Producto 3
+                    <br><br>Detalles adicionales del producto
+                    <span class="precio" data-precio="40000">$40.000</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button id="incrementar3" class="incrementar">+</button>
+                    <span id="contador3" class="numero">0</span>
+                    <button id="decrementar3" class="decrementar">-</button>
+                </h3>
+            </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="producto-item">
+            <div class="producto-check">
+                <input type="checkbox" class="checkbox" id="producto4" name="producto4">
+                <label for="producto4">Producto 4</label>
+            </div>
+            <div class="producto">
+                <a href="#" class="imagen-boton" onclick="confirmarBorrado(event)">
+                    <img class="basura" src="images/basura.png" alt="">
+                </a>
+                <img class="producto1" src="images/Herrammienta1.png" alt="Herramienta 4">
+                <h3> Descripción del Producto 4
+                    <br><br>Detalles adicionales del producto
+                    <span class="precio" data-precio="40000">$40.000</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button id="incrementar4" class="incrementar">+</button>
+                    <span id="contador4" class="numero">0</span>
+                    <button id="decrementar4" class="decrementar">-</button>
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seleccionar Todo y Total -->
+    <div class="seleccionartodo">
+        <div class="letra">
+            <input type="checkbox" class="checkbox1" id="seleccionarTodo" name="seleccionarTodo">
+            <div class="seleccionar">
+                <label for="seleccionarTodo">Seleccionar Todo</label>
+                <span id="totalSeleccionados" class="numero">(0)</span>
+            </div>
+            <div class="letra1">
+                <div class="total">
+                    <button class="Aceptar">Aceptar</button>
+                    <div>Total: <span id="contadorTotal">$0</span><a href="../datos_de_envio/datos_de_envio.html"></a></div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <!-- Enlace al JS -->
+    <script src="carrito_compras.js"></script>
+
+</body>
+</html>
